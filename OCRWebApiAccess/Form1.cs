@@ -27,7 +27,7 @@ namespace OCRWebApiAccess
             string GetFormInfoURL = string.Format(@"/api/Forms/GetFormInfo/");
             var client = new ClientConnect();
             var param = new Dictionary<string, string>();
-            param.Add("FormID", "18");
+            param.Add("FormID", FRMID.Text);
 
             var response = Task.Run(() => client.GetWithParameters(GetFormInfoURL, param)).Result;
 
@@ -47,7 +47,7 @@ namespace OCRWebApiAccess
             var client = new ClientConnect();
             var param = new Dictionary<string, string>();
             var header = new Dictionary<string, string>();
-            param.Add("FormsID", "18");
+            param.Add("FormsID", FRMID.Text);
             _Forms.UniqueDataStructure.AcceptChanges();
             DataSet TheData = new DataSet();
             TheData.Tables.Add(_Forms.UniqueDataStructure);

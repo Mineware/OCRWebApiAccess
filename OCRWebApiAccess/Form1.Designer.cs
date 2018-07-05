@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtFormPrintID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.FRMID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataStructure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,11 +175,29 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Form Print ID";
             // 
+            // FRMID
+            // 
+            this.FRMID.Location = new System.Drawing.Point(12, 87);
+            this.FRMID.Name = "FRMID";
+            this.FRMID.Size = new System.Drawing.Size(119, 20);
+            this.FRMID.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Form ID To  Use";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 442);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.FRMID);
             this.Controls.Add(this.txtFormPrintID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtError);
@@ -218,6 +238,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtFormPrintID;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox FRMID;
+        private System.Windows.Forms.Label label7;
     }
 }
 
