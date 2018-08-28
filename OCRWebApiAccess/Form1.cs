@@ -50,6 +50,7 @@ namespace OCRWebApiAccess
             param.Add("FormsID", FRMID.Text);
             _Forms.UniqueDataStructure.AcceptChanges();
             DataSet TheData = new DataSet();
+            TheData.Tables.Clear();
             TheData.Tables.Add(_Forms.UniqueDataStructure);
             string JSOResult;
             JSOResult = JsonConvert.SerializeObject(TheData, Formatting.Indented);
@@ -60,7 +61,11 @@ namespace OCRWebApiAccess
                 var response = Task.Run(() => client.PostWithBodyAndParameters(GetReportRL, param, JSOResult)).Result;
                 _PrintedForm = JsonConvert.DeserializeObject<PrintedForm>(response);
                 txtPDF.Text = _PrintedForm.PDFLocation;
-                txtFormPrintID.Text = _PrintedForm.PrintedFromID;
+                checkedListBox1.Items.Clear();
+                foreach (string s in _PrintedForm.PrintedFromID)
+                {
+                    checkedListBox1.Items.Add(s);
+                }
                 if (_PrintedForm.Success)
                 {
                     txtError.Text = "NO ERROR";
@@ -83,12 +88,16 @@ namespace OCRWebApiAccess
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
             string GetFormInfoURL = string.Format(@"/api/Report/PrintReport/");
-            var client = new ClientConnect();
-            var param = new Dictionary<string, string>();
-            param.Add("PrintedFromID", _PrintedForm.PrintedFromID);
-            param.Add("PrintedByName", "Dolf");
+            foreach(string s in checkedListBox1.CheckedItems)
+            {
+                
+                var client = new ClientConnect();
+                var param = new Dictionary<string, string>();
+                param.Add("PrintedFromID", s);
+                param.Add("PrintedByName", "Dolf");
 
-            var response = Task.Run(() => client.GetWithParameters(GetFormInfoURL, param)).Result;
+                var response = Task.Run(() => client.GetWithParameters(GetFormInfoURL, param)).Result;
+            }
 
         }
     }

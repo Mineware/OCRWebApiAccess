@@ -7,12 +7,12 @@ namespace Mineware.Systems.OCRWebAPI.Models
 {
     public class PrintedForm
     {
-        private string _PrintedFromID;
+        private List<string> _PrintedFromID;
         private string _PDFLocation;
         private bool _Success;
         private string _Error;
 
-        public string PrintedFromID
+        public List<string> PrintedFromID
         {
             get
             {

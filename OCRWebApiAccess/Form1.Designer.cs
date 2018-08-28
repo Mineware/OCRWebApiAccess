@@ -41,10 +41,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtError = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFormPrintID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.FRMID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataStructure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             // 
             // btnPrintReport
             // 
-            this.btnPrintReport.Location = new System.Drawing.Point(12, 390);
+            this.btnPrintReport.Location = new System.Drawing.Point(12, 439);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.Size = new System.Drawing.Size(119, 40);
             this.btnPrintReport.TabIndex = 1;
@@ -145,7 +145,7 @@
             // 
             // txtError
             // 
-            this.txtError.Location = new System.Drawing.Point(140, 360);
+            this.txtError.Location = new System.Drawing.Point(140, 455);
             this.txtError.Name = "txtError";
             this.txtError.Size = new System.Drawing.Size(411, 20);
             this.txtError.TabIndex = 12;
@@ -153,18 +153,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(137, 344);
+            this.label5.Location = new System.Drawing.Point(137, 439);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Error";
-            // 
-            // txtFormPrintID
-            // 
-            this.txtFormPrintID.Location = new System.Drawing.Point(140, 321);
-            this.txtFormPrintID.Name = "txtFormPrintID";
-            this.txtFormPrintID.Size = new System.Drawing.Size(411, 20);
-            this.txtFormPrintID.TabIndex = 14;
             // 
             // label6
             // 
@@ -191,14 +184,22 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Form ID To  Use";
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(140, 321);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(411, 109);
+            this.checkedListBox1.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 442);
+            this.ClientSize = new System.Drawing.Size(1040, 622);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.FRMID);
-            this.Controls.Add(this.txtFormPrintID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtError);
             this.Controls.Add(this.label5);
@@ -214,7 +215,7 @@
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.btnGetFormInfo);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "txtFormPrintID";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataStructure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,10 +237,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtError;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtFormPrintID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox FRMID;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
 
